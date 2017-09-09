@@ -1,0 +1,22 @@
+* {
+  font-family: 'PT Sans', sans-serif;
+  padding: 10;
+}
+
+a {
+  text-decoration: none;
+}
+
+form.inline {
+  display: inline;
+}
+
+#flash {
+  background-color: #ffff00;
+  padding: 4;
+}
+
+#user {
+  background-color: #eeeeee;
+  padding: 4;
+}
