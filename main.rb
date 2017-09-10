@@ -2,8 +2,8 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 
 configure do
-  set :sessions, true
-  set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
+  enable :sessions
+  set :session_secret, ENV['SESSION_SECRET']
 end
 
 #### Routes ####
