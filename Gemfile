@@ -6,6 +6,7 @@ gem 'rake'
 
 gem 'sinatra'
 gem 'haml'
+gem 'dotenv'
 gem 'sysrandom'
 gem 'bcrypt'
 

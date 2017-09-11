@@ -1,5 +1,6 @@
 require 'sysrandom/securerandom'
 require 'rake/testtask'
+require 'dotenv/tasks'
 
 desc 'Run tests'
 Rake::TestTask.new do |t|
@@ -11,8 +12,8 @@ Rake::TestTask.new do |t|
 end
 
 desc 'Start application'
-task :rackup do
-  system({'SESSION_SECRET' => SecureRandom.hex(64)}, 'rackup')
+task rackup: :dotenv do
+  system('rackup')
 end
 
 task :default => ['rackup']
