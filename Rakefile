@@ -1,19 +1,12 @@
-require 'sysrandom/securerandom'
-require 'rake/testtask'
+require 'rspec/core/rake_task'
 require 'dotenv/tasks'
 
 desc 'Run tests'
-Rake::TestTask.new do |t|
-  t.libs << '.'
-  t.libs << 'lib'
-  t.warning = false
-  t.verbose = true
-  t.test_files = FileList['test/*.rb']
-end
+RSpec::Core::RakeTask.new(:test)
 
 desc 'Start application'
 task rackup: :dotenv do
   system('rackup')
 end
 
-task :default => ['rackup']
+task default: ['rackup']

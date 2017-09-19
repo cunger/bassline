@@ -2,20 +2,19 @@ ruby '2.4.1'
 
 source 'https://rubygems.org'
 
-gem 'rake'
-
-gem 'sinatra'
-gem 'haml'
-gem 'dotenv'
-gem 'sysrandom'
 gem 'bcrypt'
+gem 'dotenv'
+gem 'haml'
+gem 'rake'
+gem 'sinatra'
+gem 'sysrandom'
 
 group :development do
   gem 'sinatra-contrib'
 end
 
 group :test do
-  gem 'minitest'
-  gem 'simplecov'
   gem 'rack-test'
+  gem 'rspec'
+  gem 'simplecov'
 end
